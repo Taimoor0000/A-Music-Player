@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music Player</title>
+  <link rel="stylesheet" href="music.css" />
+</head>
+<body>
+  <div class="player-app">
+    <h1>🎵 Music Player</h1>
+
+    <div class="top-controls">
+      <input type="text" id="searchInput" placeholder="Search by title or artist..." />
+      <select id="categoryFilter">
+        <option value="All">All Categories</option>
+      </select>
+    </div>
+
+    <div class="now-playing">
+      <h2 id="songTitle">No song selected</h2>
+      <p id="songArtist">-</p>
+      <p id="songCategory">Category: -</p>
+    </div>
+
+    <div class="controls">
+      <button id="prevBtn">⏮ Prev</button>
+      <button id="playPauseBtn">▶ Play</button>
+      <button id="nextBtn">Next ⏭</button>
+    </div>
+
+    <div class="volume-row">
+      <label for="volumeRange">🔊 Volume</label>
+      <input type="range" id="volumeRange" min="0" max="1" step="0.01" value="0.7" />
+    </div>
+
+    <h3>Playlist</h3>
+    <ul id="playlist"></ul>
+
+    <audio id="audioPlayer"></audio>
+  </div>
+
+  <script src="music.js"></script>
+</body>
+</html>
